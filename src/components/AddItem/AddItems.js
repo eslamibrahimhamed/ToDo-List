@@ -39,14 +39,17 @@ class AddItem extends Component {
           <div className="col-6" style={{ display: "inline-block" }}>
             <input
               type="text"
-              className="form-control "
+              className="form-control"
               id="name"
               placeholder="Add Name"
               onChange={this.handleChange}
               value={this.state.name}
               required
               autoComplete="off"
-              style={{ backgroundColor: "#EEE", borderRadius: "0px" }}
+              style={{
+                backgroundColor: "#EEE",
+                borderRadius: "0px",
+              }}
             />
           </div>
 
@@ -60,7 +63,10 @@ class AddItem extends Component {
               value={this.state.age}
               required
               autoComplete="off"
-              style={{ backgroundColor: "#EEE", borderRadius: "0px" }}
+              style={{
+                backgroundColor: "#EEE",
+                borderRadius: "0px",
+              }}
             />
           </div>
 

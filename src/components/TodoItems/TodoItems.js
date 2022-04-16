@@ -25,7 +25,9 @@ const TodoItems = (props) => {
       );
     })
   ) : (
-    <p className="mb-0">There Is No Items To Show</p>
+    <p className="mb-0 p-4" style={{ fontSize: "18px", color: "#888" }}>
+      There Is No Items To Show
+    </p>
   );
 
   return (
@@ -37,8 +39,14 @@ const TodoItems = (props) => {
         border: "1px solid #CCC",
       }}
     >
-      <div style={{ backgroundColor: "#DDD" }}>
-        <span className="titleName col-6">Name</span>
+      <div
+        style={{
+          backgroundColor: "#DDD",
+          fontWeight: "bold",
+          fontSize: "20px",
+        }}
+      >
+        <span className="titleName col-6 ">Name</span>
         <span className="titleAge col-4">Age</span>
         <span className="titleAction  col-2">Control </span>
       </div>

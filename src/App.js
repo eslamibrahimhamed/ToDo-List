@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import TodoItems from "./components/TodoItems/TodoItems";
 import AddItem from "./components/AddItem/AddItems";
 
-
 class App extends Component {
   state = {
     items: [
       { id: 1, name: "Eslam", age: 30 },
       { id: 2, name: "Mohamed", age: 28 },
       { id: 3, name: "Amr", age: 26 },
+      { id: 4, name: "Nada", age: 21 },
     ],
   };
 
@@ -38,7 +38,6 @@ class App extends Component {
       <div className="App container">
         <TodoItems items={this.state.items} deleteItem={this.deleteItem} />
         <AddItem addItem={this.addItem} />
-       
       </div>
     );
   }
