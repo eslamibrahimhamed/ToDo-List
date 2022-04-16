@@ -9,17 +9,23 @@ const iconStyle = {
 
 const TodoItems = (props) => {
   const { items, deleteItem } = props;
-  const listItems = items.map((item) => {
-    return (
-      <div key={item.id}>
-        <span>{item.name}</span>
-        <span>{item.age}</span>
-        <span onClick={() => deleteItem(item.id)}>
-          <i className="fa-solid fa-trash" style={iconStyle}></i>
-        </span>
-      </div>
-    );
-  });
+  let length = items.length;
+
+  const listItems = length ? (
+    items.map((item) => {
+      return (
+        <div key={item.id}>
+          <span>{item.name}</span>
+          <span>{item.age}</span>
+          <span onClick={() => deleteItem(item.id)}>
+            <i className="fa-solid fa-trash" style={iconStyle}></i>
+          </span>
+        </div>
+      );
+    })
+  ) : (
+    <p className="mb-0">There Is No Items To Show</p>
+  );
 
   return (
     <div className="listItems">
