@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import TodoItems from "./components/TodoItems/TodoItems";
 import AddItem from "./components/AddItem/AddItems";
 
+
 class App extends Component {
   state = {
     items: [
@@ -25,12 +26,19 @@ class App extends Component {
     this.setState({ items });
   };
 
-  
+  addItem = (item) => {
+    item.id = Math.random();
+    let items = this.state.items;
+    items.push(item);
+    this.setState({ iitems: items });
+  };
+
   render() {
     return (
-      <div className="App">
+      <div className="App container">
         <TodoItems items={this.state.items} deleteItem={this.deleteItem} />
-        <AddItem />
+        <AddItem addItem={this.addItem} />
+       
       </div>
     );
   }
